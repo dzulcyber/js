@@ -55,7 +55,7 @@ var numComments = numComments || 5, avatarSize = avatarSize || 60, characters = 
                 }
                 commentsHtml += "<div class=\"avatarImage " + avatarClass + "\"><img class=\"" + avatarClass + "\" src=\"" + authorAvatar + "\" alt=\"" + authorName + "\" width=\"" + avatarSize + "\" height=\"" + avatarSize + "\"/></div>";
             }
-            commentsHtml += "<b>" + authorName + "</b>";
+            commentsHtml += "<div class=\"komen\"><b>" + authorName + "</b>";
             var commHTML = entry.content.$t;
             var commBody = commHTML.replace(/(<([^>]+)>)/gi, "");
             if (commBody != "" && commBody.length > characters) {
@@ -67,7 +67,7 @@ var numComments = numComments || 5, avatarSize = avatarSize || 60, characters = 
             } else {
                 commBody = commBody;
             }
-            commentsHtml += "<span>" + commBody + "</span>";
+            commentsHtml += "<span>" + commBody + "</span></div>";
             commentsHtml += "</li></div></a>";
             }
 
